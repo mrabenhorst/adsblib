@@ -1,6 +1,9 @@
 # adsblib
 C# Library for collecting and processing ADS-B data from a Dump1090 port 30003 socket
 
+# Purpose:
+Dump 1090 Socket 30003 delivers pieces of partially complete ADS-B information as it is read OTA. These records might not include all metadata previously broadcasted. This library collects all data coming in and makes sure to deliver records using as much metadata as is known about the aircraft at the time of delivery. Most importantly, messages will not be delivered unless location (Lat/Lng/Alt) is known.
+
 # How to use (Standalone):
 1. Open the ADSBCLI Project
 2. Build
